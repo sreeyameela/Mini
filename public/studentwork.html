@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSE Website</title>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" />
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="shortcut icon" href="/logoclg.png" type="image/png">
+    <style>
+        #div{
+            font-size: 18px;
+            padding-left: 250px;
+            padding-right: 250px;
+            line-height: 190%;
+        }
+        
+    </style>
+</head>
+
+<body onload="view()">
+
+    <div class="fixx">
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a class="logo" href="index.html"><img src="logoclg1.png" style="height: 120px;width: 120px;margin-top: -33px;margin-left: -22px;"></a>
+            <a class="logo" href="index.html"><img src="imageclg.png" style="margin-top: -11px;margin-left: -25px;" ></a>
+        </div>
+        <a class="navbar-brand"></a>
+        <form class="form-inline">
+            
+            <div class="dropdown" id="log" >
+                <button class="btn btn-primary mb1 bg-blue" style="width: 150px;height: 45px;border-radius: 8px;font-size: 20px;margin-right: 20px;" > Login</button>
+                <div class="dropdown-content1">
+                    <a href="adminlogin.html" style="font-size: medium;">Admin login</a>
+                    <a href="facultylogin.html" target="_self" style="font-size: medium;">Faculty login</a>
+                </div>
+            </div>
+            <div >
+                <button type="button"class="btn btn-primary mb1 bg-blue" style="width: 250px;height: 45px;border-radius: 8px;font-size: 20px;" data-toggle="modal" data-target="#myModal">Vision and Mission</button>
+                
+                    <div class="modal fade" id="myModal" role="dialog" >
+                        <div class="modal-dialog" >
+                            <div class="modal-content" style="background: linear-gradient(to bottom, #38464a 0%, #8d9294 100%);color:white; width: 600px; padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;">
+
+                                <div class="modal-header"  >
+                                    <button type="button" class="close" data-dismiss="modal" style="border-radius: 50%;"><i class="fas fa-times" style="color: white;border-radius: 50%;"></i></button>
+                                </div><br>
+                                <h4 class="modal-title" style="font-size: large;">
+                                    <b>Vision of the Department</b>
+                                </h4>
+                                
+                                <hr style="background-color: white;">
+                                <div class="modal-para" style="font-size: medium;">
+
+                                    <p>Towards a Global Knowledge Hub, striving continuously in pursuit of excellence in Education, Research, Consultancy and Technological services to the society.
+
+                                    </p>
+
+                                </div>
+                                <hr style="background-color: white;">
+                                <h4 class="modal-title" style="font-size: large;">
+                                    <b>Mission of the Department</b>
+                                </h4>
+                                <hr style="background-color: white;">
+                                <div class="modal-para" style="font-size: medium;">
+
+                                    <p><b>M1:</b> To produce the best quality Computer Science professionals by imparting quality training, hands on experience and value education.
+
+                                        <br> <br><b> M2:</b> To strengthen links with industry through partnerships and collaborative developmental works.
+
+                                        <br> <br> <b>M3:</b> To attain self-sustainability and overall development through Research, Consultancy and Development activities.
+
+                                        <br> <br> <b>M4:</b> To extend technical expertise to other technical institutions of the region and play a lead role in imparting technical education.
+
+                                        <br> <br><b> M5:</b> To inculcate work ethics and commitment in students for their future endeavors to serve the society.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+               
+            </div>
+
+            
+        </form>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg" id="mynav" style="background-color:#38464a; height: 63px;">
+        <a class="nav-link" href="#">
+            <li>
+                <div class="bg d-flex justify-content-between" >
+                    <div class="see" >
+                        <div class="hy"><span id="gmail"  style="color: white;"></span><span> </span><i id = "dropB" class="fa fa-caret-down fa-1x" style="visibility: hidden;"></i></div>
+                        <div class="cont" id="cont1" style="margin-left: 14px; visibility: hidden;">
+                            <button onclick="deleteItem()" id="out" class="btn btn-primary mb1 bg-blue" style="width:75px;height: 30px;border-radius: 8px;font-size: 14px;text-align: center ;">LOGOUT</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </a>
+        <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="color: white;background-color: #38464a;">
+            
+            <ul class="navbar-nav ml-auto" >
+                
+                <li class="nav-item ">
+                <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Department</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="infra.html">Infrastructure</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faculty.html">Faculty</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="research.html">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calendar.html">Academics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="query.html">Query</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="see" >
+                        <div class="hy"  style="text-shadow: 0px 0px 10px rgb(248, 248, 247), 0px 0px 20px rgb(248, 248, 247),
+                        0px 0px 40px rgb(248, 248, 247), 0px 0px 80px rgb(248, 248, 247);
+                    color: whitesmoke;">Student Corner</div>
+                        <div class="cont">
+                        <a href="studentwork.html">Activities</a><br>
+                        <a href="codingplatforms.html">Platforms</a><br>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html"  >Contact-Us</a>
+                </li>
+            </ul> 
+        </div>
+    </nav>
+    </div><br><br><br><br><br><br><br><br><Br><br><br><br>
+        <center>
+            <div class="di" >
+                <button class="btn"  style="width: 150px;height: 45px;border-radius: 8px;font-size: 20px;margin-right: 40px; background-color: #e68b0d;color: white; font-weight: 19px;" onclick="myFunction()" > CSI</button>
+
+                <button class="btn"  style="width: 150px;height: 45px;border-radius: 8px;font-size: 20px;margin-right: 40px; background-color: #e68b0d;color: white; font-weight: 19px;" onclick="myFunction1()" > ISTE</button>
+
+                <button class="btn"  style="width: 150px;height: 45px;border-radius: 8px;font-size: 20px; background-color: #e68b0d;color: white; font-weight: 19px;" onclick="myFunction2()" >SIH </button>
+            </div>
+        </center>
+        <br><br><Br><BR>
+        <div>
+            <p id="div">Computer Society of India is the first and largest body of computer professionals in India. It was started on 6 March 1965 by a few computer professionals and has now grown to be the national body representing computer professionals. It has 72 chapters across India, 511 student branches, and 100,000 members. The Computer Society of India is a non-profit professional body which facilitates exchanging views & information and, sharing ideas. The wide spectrum of members is committed to the advancement of theory and practice of Computer Engineering and Technology Systems, Science and Engineering, Information Processing and related Arts and Sciences. The Society also encourages and assists professionals to maintain integrity and competence of the profession and fosters a sense of partnership amongst members. CSI Student Branch at CVR College of Engineering was started on November 9th, 2015 with the goal of disseminating knowledge. It endeavors to offer technical, educational and professional advantages for students by arranging and organizing guest lectures, workshops, technical quizzes and, knowledge sharing sessions on recent trends and techniques in the area of Computer Science. Prof. Badrinarayana (CSE Dept) serves as the counsellor, Dr. A.Vani Vathsala (CSE Dept), Dr.H.N.Lakshmi (IT Dept) and Mr.M.Raghava (CSE Dept) serve as Student Coordinators for CVR CE CSI student branch.
+            </p>
+        </div>
+        
+            <br><BR><br><BR><br><BR>
+        <br>
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="copyright">
+                    CVR College Of Engineering<br>
+                    Vastunagar, Mangalpalli (V), Ibrahimpatnam (M)<br>
+                    Rangareddy (D), Telangana 501 510
+                </p>
+                <div class="social-list">
+                    <a href="https://www.google.com/maps/place/CVR+College+Of+Engineering/@17.1964133,78.5950569,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcba659868b4727:0xf39a771705e23170!8m2!3d17.1964133!4d78.5972509?shorturl=1" target = "_blank">
+                        <i class="fa fa-location-arrow" style="color: #ebe8e8;"> <span id = "loc">Reach us here</span></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <script>
+            function myFunction() {
+                var y=document.getElementById("div");
+                if(y.innerHTML==="The Indian Society for Technical Education (ISTE) is the leading National Professional non-profit making Society for the Technical Education System in our country with the motto of Career Development of Teachers and Personality Development of Students and overall development of our Technical Education System. Being the only national organisation of educators in the field of Engineering and Technology, ISTE effectively contributes in various missions of the Union Government. The strength of ISTE is the strong base it has in technical education institutions in the country. At present, the ISTE has a very large and an effective membership base consisting of 124024 Life Members, 5 lakh Student members, 2734 Institutional Members, 1369 Faculty Chapters, 1479 Student Chapters at institutional level and 17 Sections at State level.The major objective of the ISTE is to provide quality training programmes to teachers and administrators of technical institutions to update their knowledge and skills in their fields of activity and to assist and contribute in the production and development of top quality professional engineers and technicians needed by the industry and other organisations."){
+                    y.innerHTML="Computer Society of India is the first and largest body of computer professionals in India. It was started on 6 March 1965 by a few computer professionals and has now grown to be the national body representing computer professionals. It has 72 chapters across India, 511 student branches, and 100,000 members. The Computer Society of India is a non-profit professional body which facilitates exchanging views & information and, sharing ideas. The wide spectrum of members is committed to the advancement of theory and practice of Computer Engineering and Technology Systems, Science and Engineering, Information Processing and related Arts and Sciences. The Society also encourages and assists professionals to maintain integrity and competence of the profession and fosters a sense of partnership amongst members. CSI Student Branch at CVR College of Engineering was started on November 9th, 2015 with the goal of disseminating knowledge. It endeavors to offer technical, educational and professional advantages for students by arranging and organizing guest lectures, workshops, technical quizzes and, knowledge sharing sessions on recent trends and techniques in the area of Computer Science. Prof. Badrinarayana (CSE Dept) serves as the counsellor, Dr. A.Vani Vathsala (CSE Dept), Dr.H.N.Lakshmi (IT Dept) and Mr.M.Raghava (CSE Dept) serve as Student Coordinators for CVR CE CSI student branch.";
+                }
+                else if(y.innerHTML==="Innovation and entrepreneurship are at the peak in India. In order to make development a comprehensive mass movement and innovate on all fronts, MHRD, AICTE, i4c and Persistent Systems have come together to organise Smart India Hackathon (SIH) 2019 - a unique Open Innovation Model for identifying new and disruptive technology innovations to solve the challenges faced in our country. It's a non-stop product development competition, where problem statements are posed to technology students for innovative solutions. It can help to :<br>Hardness creativity & expertise of students<br>Spark institute-level hackathons<br>Build funnel for 'Startup India' campaign<br>Crowdsource solutions for improving governance and quality of life<br>  Provide opportunity to citizens to provide innovative solutions to India's daunting problems"){
+                    y.innerHTML="Computer Society of India is the first and largest body of computer professionals in India. It was started on 6 March 1965 by a few computer professionals and has now grown to be the national body representing computer professionals. It has 72 chapters across India, 511 student branches, and 100,000 members. The Computer Society of India is a non-profit professional body which facilitates exchanging views & information and, sharing ideas. The wide spectrum of members is committed to the advancement of theory and practice of Computer Engineering and Technology Systems, Science and Engineering, Information Processing and related Arts and Sciences. The Society also encourages and assists professionals to maintain integrity and competence of the profession and fosters a sense of partnership amongst members. CSI Student Branch at CVR College of Engineering was started on November 9th, 2015 with the goal of disseminating knowledge. It endeavors to offer technical, educational and professional advantages for students by arranging and organizing guest lectures, workshops, technical quizzes and, knowledge sharing sessions on recent trends and techniques in the area of Computer Science. Prof. Badrinarayana (CSE Dept) serves as the counsellor, Dr. A.Vani Vathsala (CSE Dept), Dr.H.N.Lakshmi (IT Dept) and Mr.M.Raghava (CSE Dept) serve as Student Coordinators for CVR CE CSI student branch."
+                }
+                else{
+                    y.innerHTML="Computer Society of India is the first and largest body of computer professionals in India. It was started on 6 March 1965 by a few computer professionals and has now grown to be the national body representing computer professionals. It has 72 chapters across India, 511 student branches, and 100,000 members. The Computer Society of India is a non-profit professional body which facilitates exchanging views & information and, sharing ideas. The wide spectrum of members is committed to the advancement of theory and practice of Computer Engineering and Technology Systems, Science and Engineering, Information Processing and related Arts and Sciences. The Society also encourages and assists professionals to maintain integrity and competence of the profession and fosters a sense of partnership amongst members. CSI Student Branch at CVR College of Engineering was started on November 9th, 2015 with the goal of disseminating knowledge. It endeavors to offer technical, educational and professional advantages for students by arranging and organizing guest lectures, workshops, technical quizzes and, knowledge sharing sessions on recent trends and techniques in the area of Computer Science. Prof. Badrinarayana (CSE Dept) serves as the counsellor, Dr. A.Vani Vathsala (CSE Dept), Dr.H.N.Lakshmi (IT Dept) and Mr.M.Raghava (CSE Dept) serve as Student Coordinators for CVR CE CSI student branch."
+                }
+            
+            }
+            function myFunction1() {
+              var x=document.getElementById("div");
+              if (x.innerHTML === "Computer Society of India is the first and largest body of computer professionals in India. It was started on 6 March 1965 by a few computer professionals and has now grown to be the national body representing computer professionals. It has 72 chapters across India, 511 student branches, and 100,000 members. The Computer Society of India is a non-profit professional body which facilitates exchanging views & information and, sharing ideas. The wide spectrum of members is committed to the advancement of theory and practice of Computer Engineering and Technology Systems, Science and Engineering, Information Processing and related Arts and Sciences. The Society also encourages and assists professionals to maintain integrity and competence of the profession and fosters a sense of partnership amongst members. CSI Student Branch at CVR College of Engineering was started on November 9th, 2015 with the goal of disseminating knowledge. It endeavors to offer technical, educational and professional advantages for students by arranging and organizing guest lectures, workshops, technical quizzes and, knowledge sharing sessions on recent trends and techniques in the area of Computer Science. Prof. Badrinarayana (CSE Dept) serves as the counsellor, Dr. A.Vani Vathsala (CSE Dept), Dr.H.N.Lakshmi (IT Dept) and Mr.M.Raghava (CSE Dept) serve as Student Coordinators for CVR CE CSI student branch.") {
+                    x.innerHTML = "The Indian Society for Technical Education (ISTE) is the leading National Professional non-profit making Society for the Technical Education System in our country with the motto of Career Development of Teachers and Personality Development of Students and overall development of our Technical Education System. Being the only national organisation of educators in the field of Engineering and Technology, ISTE effectively contributes in various missions of the Union Government. The strength of ISTE is the strong base it has in technical education institutions in the country. At present, the ISTE has a very large and an effective membership base consisting of 124024 Life Members, 5 lakh Student members, 2734 Institutional Members, 1369 Faculty Chapters, 1479 Student Chapters at institutional level and 17 Sections at State level.The major objective of the ISTE is to provide quality training programmes to teachers and administrators of technical institutions to update their knowledge and skills in their fields of activity and to assist and contribute in the production and development of top quality professional engineers and technicians needed by the industry and other organisations.";
+                }
+                 else if(x.innerHTML==="Innovation and entrepreneurship are at the peak in India. In order to make development a comprehensive mass movement and innovate on all fronts, MHRD, AICTE, i4c and Persistent Systems have come together to organise Smart India Hackathon (SIH) 2019 - a unique Open Innovation Model for identifying new and disruptive technology innovations to solve the challenges faced in our country. It's a non-stop product development competition, where problem statements are posed to technology students for innovative solutions. It can help to :<br>Hardness creativity & expertise of students<br>Spark institute-level hackathons<br>Build funnel for 'Startup India' campaign<br>Crowdsource solutions for improving governance and quality of life<br>  Provide opportunity to citizens to provide innovative solutions to India's daunting problems") {
+                    x.innerHTML = "The Indian Society for Technical Education (ISTE) is the leading National Professional non-profit making Society for the Technical Education System in our country with the motto of Career Development of Teachers and Personality Development of Students and overall development of our Technical Education System. Being the only national organisation of educators in the field of Engineering and Technology, ISTE effectively contributes in various missions of the Union Government. The strength of ISTE is the strong base it has in technical education institutions in the country. At present, the ISTE has a very large and an effective membership base consisting of 124024 Life Members, 5 lakh Student members, 2734 Institutional Members, 1369 Faculty Chapters, 1479 Student Chapters at institutional level and 17 Sections at State level.The major objective of the ISTE is to provide quality training programmes to teachers and administrators of technical institutions to update their knowledge and skills in their fields of activity and to assist and contribute in the production and development of top quality professional engineers and technicians needed by the industry and other organisations.";
+                }
+                else{
+                    x.innerHTML = "The Indian Society for Technical Education (ISTE) is the leading National Professional non-profit making Society for the Technical Education System in our country with the motto of Career Development of Teachers and Personality Development of Students and overall development of our Technical Education System. Being the only national organisation of educators in the field of Engineering and Technology, ISTE effectively contributes in various missions of the Union Government. The strength of ISTE is the strong base it has in technical education institutions in the country. At present, the ISTE has a very large and an effective membership base consisting of 124024 Life Members, 5 lakh Student members, 2734 Institutional Members, 1369 Faculty Chapters, 1479 Student Chapters at institutional level and 17 Sections at State level.The major objective of the ISTE is to provide quality training programmes to teachers and administrators of technical institutions to update their knowledge and skills in their fields of activity and to assist and contribute in the production and development of top quality professional engineers and technicians needed by the industry and other organisations.";
+                }
+
+
+           
+            }
+            function myFunction2() {
+                var x=document.getElementById("div");
+                if(x.innerHTML==="Computer Society of India is the first and largest body of computer professionals in India. It was started on 6 March 1965 by a few computer professionals and has now grown to be the national body representing computer professionals. It has 72 chapters across India, 511 student branches, and 100,000 members. The Computer Society of India is a non-profit professional body which facilitates exchanging views & information and, sharing ideas. The wide spectrum of members is committed to the advancement of theory and practice of Computer Engineering and Technology Systems, Science and Engineering, Information Processing and related Arts and Sciences. The Society also encourages and assists professionals to maintain integrity and competence of the profession and fosters a sense of partnership amongst members. CSI Student Branch at CVR College of Engineering was started on November 9th, 2015 with the goal of disseminating knowledge. It endeavors to offer technical, educational and professional advantages for students by arranging and organizing guest lectures, workshops, technical quizzes and, knowledge sharing sessions on recent trends and techniques in the area of Computer Science. Prof. Badrinarayana (CSE Dept) serves as the counsellor, Dr. A.Vani Vathsala (CSE Dept), Dr.H.N.Lakshmi (IT Dept) and Mr.M.Raghava (CSE Dept) serve as Student Coordinators for CVR CE CSI student branch."){
+                    x.innerHTML="Innovation and entrepreneurship are at the peak in India. In order to make development a comprehensive mass movement and innovate on all fronts, MHRD, AICTE, i4c and Persistent Systems have come together to organise Smart India Hackathon (SIH) 2019 - a unique Open Innovation Model for identifying new and disruptive technology innovations to solve the challenges faced in our country. It's a non-stop product development competition, where problem statements are posed to technology students for innovative solutions. It can help to :<br>Hardness creativity & expertise of students<br>Spark institute-level hackathons<br>Build funnel for 'Startup India' campaign<br>Crowdsource solutions for improving governance and quality of life<br>  Provide opportunity to citizens to provide innovative solutions to India's daunting problems"
+                }
+                else if(x.innerHTML==="The Indian Society for Technical Education (ISTE) is the leading National Professional non-profit making Society for the Technical Education System in our country with the motto of Career Development of Teachers and Personality Development of Students and overall development of our Technical Education System. Being the only national organisation of educators in the field of Engineering and Technology, ISTE effectively contributes in various missions of the Union Government. The strength of ISTE is the strong base it has in technical education institutions in the country. At present, the ISTE has a very large and an effective membership base consisting of 124024 Life Members, 5 lakh Student members, 2734 Institutional Members, 1369 Faculty Chapters, 1479 Student Chapters at institutional level and 17 Sections at State level.The major objective of the ISTE is to provide quality training programmes to teachers and administrators of technical institutions to update their knowledge and skills in their fields of activity and to assist and contribute in the production and development of top quality professional engineers and technicians needed by the industry and other organisations."){
+                    x.innerHTML="Innovation and entrepreneurship are at the peak in India. In order to make development a comprehensive mass movement and innovate on all fronts, MHRD, AICTE, i4c and Persistent Systems have come together to organise Smart India Hackathon (SIH) 2019 - a unique Open Innovation Model for identifying new and disruptive technology innovations to solve the challenges faced in our country. It's a non-stop product development competition, where problem statements are posed to technology students for innovative solutions. It can help to :<br>Hardness creativity & expertise of students<br>Spark institute-level hackathons<br>Build funnel for 'Startup India' campaign<br>Crowdsource solutions for improving governance and quality of life<br>  Provide opportunity to citizens to provide innovative solutions to India's daunting problems"
+                }
+                else{
+                    x.innerHTML="Innovation and entrepreneurship are at the peak in India. In order to make development a comprehensive mass movement and innovate on all fronts, MHRD, AICTE, i4c and Persistent Systems have come together to organise Smart India Hackathon (SIH) 2019 - a unique Open Innovation Model for identifying new and disruptive technology innovations to solve the challenges faced in our country. It's a non-stop product development competition, where problem statements are posed to technology students for innovative solutions. It can help to :<br>Hardness creativity & expertise of students<br>Spark institute-level hackathons<br>Build funnel for 'Startup India' campaign<br>Crowdsource solutions for improving governance and quality of life<br>  Provide opportunity to citizens to provide innovative solutions to India's daunting problems"
+                }
+          
+            }
+        </script>
+    <script>
+        var mail = localStorage.getItem('email');
+        if(mail!=undefined)
+        {
+           document.getElementById("log").style.visibility = 'hidden';
+           document.getElementById("out").style.visibility = 'visible';
+           document.getElementById("cont1").style.visibility = 'visible';
+           document.getElementById("dropB").style.visibility= 'visible';
+
+        }
+        
+    </script>
+    <script src="database.js"></script>
+        
+
+</body>
+
+</html>

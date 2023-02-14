@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>CSE Website</title>
+	<meta charset="utf-8">
+	<meta name="viewport"content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="shortcut icon" href="/logoclg.png" type="image/png">
+    
+    
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    
+    <div class="bg"  >  
+        
+        <nav class="navbar navbar-expand-lg" id="mynav" style="background-color:#38464a; height: 63px;">
+            <a class="navbar-brand1" href="#">
+                <li>
+                    <div class="bg d-flex justify-content-between" >
+                        <div class="see" >
+                            <div class="hy"><span id="gmail"  style="color: white;"></span><span> </span><i id = "dropB" class="fa fa-caret-down fa-1x" style="visibility: hidden;"></i></div>
+                            <div class="cont" id="cont" style="margin-left: 14px; visibility: hidden;">
+                                <button onclick="deleteItem()" id="out" class="btn btn-primary mb1 bg-blue" style="width:75px;height: 30px;border-radius: 8px;font-size: 14px;text-align: center ;">LOGOUT</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse" style="color: white;background-color: #38464a;">
+                
+            <ul class="navbar-nav ml-auto" >
+                
+                <li class="nav-item ">
+                <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Department</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="infra.html">Infrastructure</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faculty.html">Faculty</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="research.html">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calendar.html">Academics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="active" href="query.html">Query</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faculty.html">Faculty</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="research.html">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calendar.html">Academics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="active" href="query.html">Query</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="faculty.html">Faculty</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="research.html">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calendar.html">Academics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="active" href="query.html">Query</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="see" >
+                        <div class="hy">Student Corner</div>
+                        <div class="cont">
+                          <a href="studentwork.html">Activities</a><br>
+                          <a href="codingplatforms.html">Platforms</a><br>
+                        </div>
+                      </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html"  >Contact-Us</a>
+                </li>
+            </ul> 
+        </nav>
+          
+    </div>
+
+        <div class="img-wrapper">
+
+            <img src="http://cvr.ac.in/home4/images/main5.jpg">
+         
+        </div>
+
+        <div class="banner">
+            <p>Department of Computer Science and Engineering</p>
+            <h1>Welcomes You</h1><br><br>
+            <JavaBlink style="font-size:25px;color: peachpuff;">Latest News:</JavaBlink>
+            
+            <marquee width="100%" direction="left" style="padding: 5px; color: white;">
+                <p style="font-size:25px; color: white;" id="quick1">
+                    <a></a>
+                </p>
+            </marquee>
+            
+        </div>
+  
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="copyright">
+                CVR College Of Engineering<br>
+                Vastunagar, Mangalpalli (V), Ibrahimpatnam (M)<br>
+                Rangareddy (D), Telangana 501 510
+            </p>
+            <div class="social-list">
+                <a href="https://www.google.com/maps/place/CVR+College+Of+Engineering/@17.1964133,78.5950569,17z/data=!3m1!4b1!4m5!3m4!1s0x3bcba659868b4727:0xf39a771705e23170!8m2!3d17.1964133!4d78.5972509?shorturl=1" target = "_blank">
+                    <i class="fa fa-location-arrow" style="color: #ebe8e8;"> <span id = "loc">Reach us here</span></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        var mail = localStorage.getItem('email');
+        if(mail!=undefined)
+        {
+           document.getElementById("log").style.visibility = 'hidden';
+           document.getElementById("out").style.visibility = 'visible';
+           document.getElementById("cont").style.visibility = 'visible';
+           document.getElementById("dropB").style.visibility='visible';
+        }
+        
+    </script>
+    <script src="database.js"></script>
+</body>
+
+</html>
